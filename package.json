@@ -1,0 +1,15 @@
+{
+  "name": "metadata-removal",
+  "version": "1.0.0",
+  "description": "Lossless, local metadata removal for photos, video, and audio. Zero dependencies. Runs in the browser and in Node.",
+  "main": "src/metadata-removal-engine.js",
+  "license": "MIT",
+  "author": "Michael Carter",
+  "homepage": "https://validprivacy.github.io/metadata-removal.html",
+  "repository": { "type": "git", "url": "https://github.com/validprivacy/metadata-removal.git" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}

@@ -1,0 +1,39 @@
+:root { --bg: #f7f5f0; --bg-raise: #ffffff; --bg-alt: #f0ede6; --text: #1d1e21; --text-dim: #5f5d58; --faint: #e2ddd3; --border: #d6d0c4; --border-strong: #b9b2a5; --focus: rgba(29,30,33,0.22); --shadow: rgba(29,30,33,0.06); --primary: #1d1e21; --on-primary: #ffffff; --primary-hover: #3b3d42; --font-ui: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; --font-brand: Georgia, "Noto Serif", "Times New Roman", serif; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --bg: #16181b; --bg-raise: #1d2024; --bg-alt: #1a1c20; --text: #e9ebee; --text-dim: #a1a7ae; --faint: #2a2e33; --border: #33383e; --border-strong: #4b5158; --focus: rgba(230,233,237,0.25); --shadow: rgba(0,0,0,0.3); --primary: #e9ebee; --on-primary: #16181b; --primary-hover: #ffffff; color-scheme: dark; } }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--bg); }
+body { font-family: var(--font-ui); color: var(--text); line-height: 1.6; font-size: 16px; }
+main { max-width: 960px; margin: 0 auto; padding: 48px 20px 64px; }
+h1 { font-family: var(--font-brand); font-weight: 400; font-size: clamp(32px, 5vw, 46px); line-height: 1.15; }
+.lead { font-size: 19px; margin: 14px 0 28px; max-width: 40em; color: var(--text-dim); }
+.btn { display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-size: 15px; font-weight: 600; padding: 11px 22px; min-height: 46px; border-radius: 8px; border: 1px solid var(--primary); background: var(--primary); color: var(--on-primary); cursor: pointer; }
+.btn:hover { background: var(--primary-hover); border-color: var(--primary-hover); }
+.btn.quiet { background: transparent; color: var(--text); border-color: var(--border-strong); font-weight: 500; }
+.btn.quiet:hover { border-color: var(--text); }
+.btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.mr-tool { background: var(--bg-raise); border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 1px 2px var(--shadow); overflow: hidden; }
+.mr-drop { display: grid; justify-items: center; gap: 16px; text-align: center; margin: 22px; padding: 44px 24px; border: 2px dashed var(--border-strong); border-radius: 12px; }
+.mr-drop.over { border-color: var(--text); background: var(--bg-alt); }
+.mr-drop-title { font-family: var(--font-brand); font-size: 24px; }
+.mr-check { display: flex; gap: 10px; align-items: flex-start; max-width: 36em; text-align: left; color: var(--text-dim); font-size: 14.5px; cursor: pointer; }
+.mr-check input { margin-top: 4px; flex: none; }
+.mr-fine { color: var(--text-dim); font-size: 14px; }
+.mr-status { margin: 0 22px 18px; color: var(--text-dim); font-size: 15px; overflow-wrap: anywhere; }
+.mr-summary { margin: 0 22px 16px; }
+.mr-summary-head { font-weight: 600; font-size: 17px; margin-bottom: 10px; }
+.mr-counts { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.mr-counts li { padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; font-size: 14px; color: var(--text-dim); background: var(--bg); }
+.mr-counts strong { color: var(--text); font-weight: 600; }
+.mr-save { margin: 0 22px 20px; }
+.mr-results { border-top: 1px solid var(--border); max-height: 460px; overflow: auto; }
+.mr-results table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.mr-results th, .mr-results td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--faint); }
+.mr-results th { position: sticky; top: 0; background: var(--bg-raise); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); font-weight: 600; }
+.mr-results td { color: var(--text-dim); }
+.mr-results td.mr-name { color: var(--text); overflow-wrap: anywhere; min-width: 160px; }
+.mr-results tr.mr-skipped td { opacity: 0.7; }
+.notes { margin-top: 28px; color: var(--text-dim); font-size: 14.5px; display: grid; gap: 10px; }
+.notes strong { color: var(--text); }
+footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13.5px; }
+@media (max-width: 560px) { .mr-drop { margin: 14px; padding: 30px 16px; } .mr-drop .btn-row { flex-direction: column; width: 100%; } }

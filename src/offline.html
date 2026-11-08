@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src {{SCRIPT_HASHES}}; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Metadata Removal | Valid Privacy</title>
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Metadata Removal</h1>
+  <p class="lead">Remove location, device details, dates, and other hidden data from photos, videos, and audio. This file runs entirely on your own computer, with no internet connection needed, and your files are never uploaded.</p>
+  <div class="mr-tool">
+    <div class="mr-drop" id="mr-drop">
+      <p class="mr-drop-title">Drop files or folders here</p>
+      <div class="btn-row">
+        <button class="btn" type="button" id="mr-pick-files">Choose files</button>
+        <button class="btn quiet" type="button" id="mr-pick-folder">Choose a folder</button>
+      </div>
+      <input type="file" id="mr-files" multiple hidden accept=".jpg,.jpeg,.heic,.heif,.png,.webp,.mp4,.mov,.m4v,.m4a,.mp3,.wav,.flac,image/jpeg,image/heic,image/heif,image/png,image/webp,video/mp4,video/quicktime,audio/*">
+      <input type="file" id="mr-folder" webkitdirectory multiple hidden>
+      <label class="mr-check"><input type="checkbox" id="mr-rename"> Rename the clean copies to numbers. File names like IMG_20260102_030405 can show when something was taken.</label>
+      <p class="mr-fine">JPEG, HEIC, PNG, WebP, MP4, MOV, M4A, MP3, WAV, and FLAC. Your originals are never changed.</p>
+    </div>
+    <p class="mr-status" id="mr-status" aria-live="polite" hidden></p>
+    <div class="mr-summary" id="mr-summary" hidden></div>
+    <div class="btn-row mr-save" id="mr-save-row" hidden>
+      <button class="btn" type="button" id="mr-save-download">Download as zip</button>
+      <button class="btn quiet" type="button" id="mr-save-folder">Save to a folder</button>
+      <button class="btn quiet" type="button" id="mr-reset">Start over</button>
+    </div>
+    <div class="mr-results" id="mr-results" hidden></div>
+  </div>
+  <div class="notes">
+    <p><strong>Lossless.</strong> Only the metadata is removed. The picture, video, and audio stay byte for byte the same, and phone photos stay upright.</p>
+    <p><strong>It cannot remove what is in the picture or recording itself,</strong> such as faces, signs, or voices. Some drones save GPS in a separate .SRT file next to the video, so leave that file out when you share.</p>
+    <p><strong>Coming soon:</strong> AVIF images, GIF, TIFF, RAW camera files, PDFs, and Word, Excel, and PowerPoint documents.</p>
+  </div>
+  <footer>Metadata Removal {{VERSION}} by Valid Privacy. MIT License. validprivacy.github.io</footer>
+</main>
+<script>
+{{ENGINE}}
+</script>
+<script>
+{{UI}}
+</script>
+</body>
+</html>
