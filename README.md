@@ -78,6 +78,10 @@ npm run build
 
 `npm run build` regenerates `metadata-removal-offline.html` from `src/`. The tests run every fixture in `test/fixtures` and check that the test values are gone and the media data is unchanged. Every push runs the tests and checks that the offline file matches its source.
 
+## Contributing and Security
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) to report a problem or send a change. To report metadata that survives cleaning, or any other security issue, follow [SECURITY.md](SECURITY.md) and report it privately.
+
 ## Limits
 
 * It cannot remove what is in the picture or recording itself: faces, signs, reflections, voices, or background sounds

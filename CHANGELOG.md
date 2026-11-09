@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+* SECURITY.md, with how to report a security issue privately, what is in scope, and when to expect a reply
+* CONTRIBUTING.md, with how to report a problem, how to send a change, and the rules every change follows
+
 ## [1.0.0] - 2026-11-08
 
 First release as its own repository, under the MIT License.
